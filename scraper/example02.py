@@ -1,4 +1,3 @@
-import json5
 import requests
 from parsel import Selector
 
