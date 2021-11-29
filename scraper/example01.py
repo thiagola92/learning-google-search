@@ -13,6 +13,9 @@ response = requests.get(
     },
 )
 
+with open("page.html", "w") as f:
+    f.write(response.text)
+
 
 def search_images(array):
     images = []

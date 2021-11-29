@@ -5,6 +5,9 @@ from urllib.parse import urlparse, urljoin, parse_qs
 
 response = requests.get("https://www.google.com/search", params={"q": "harry potter"})
 
+with open("page.html", "w") as f:
+    f.write(response.text)
+
 results = re.findall(r'a href="(/url\?q=.*?)"', response.text)
 
 if results:
